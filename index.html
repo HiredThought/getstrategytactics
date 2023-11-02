@@ -2,7 +2,60 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Redirecting...</title>
+    <title>Get Strategy Tactics</title>
+    <style>
+      /* CSS */
+      .button {
+        appearance: none;
+        background-color: #2ea44f;
+        border: 1px solid rgba(27, 31, 35, .15);
+        border-radius: 6px;
+        box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 40px;
+        padding: 6px 16px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
+        white-space: nowrap;
+      }
+
+      .button:focus:not(:focus-visible):not(.focus-visible) {
+        box-shadow: none;
+        outline: none;
+      }
+
+      .button:hover {
+        background-color: #2c974b;
+      }
+
+      .button:focus {
+        box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+        outline: none;
+      }
+
+      .button:disabled {
+        background-color: #94d3a2;
+        border-color: rgba(27, 31, 35, .1);
+        color: rgba(255, 255, 255, .8);
+        cursor: default;
+      }
+
+      .button:active {
+        background-color: #298e46;
+        box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+      }
+      </style>
     <script>
       // URL options
       var urls = [
@@ -12,12 +65,19 @@
       
       // Random number between 0 and 1
       var number = Math.floor(Math.random() * urls.length);
-      window.location.replace(urls[number]);
+      // window.location.replace(urls[number]);
+      window.addEventListener("load", (event) => {
+        document.getElementById("link").href = urls[number];
+      });
       
     </script>
   </head>
-  <body>
-    <img style="display: block; margin-left: auto; margin-right: auto; max-width: 50%;" height="500" src="strategy_tactics.png">
-    <p style="text-align: center;">Redirecting to <a href="https://pipdecks.com/pages/strategy-tactics">Pip Decks</a>...</p>
+  <body style="text-align: center;">
+    <img style="display: block; margin-left: auto; margin-right: auto; max-width: 50%;" height="400" src="strategy_tactics.png">
+    <p><a id="link" class="button" href="https://pipdecks.com/pages/strategy-tactics">Yes, I want 10% off!</a></p>
+    <p>If you purchase through this link, Ben and David get a small commission at no cost to you.</p>
+
+    <h2 style="margin-top: 50px;">Want to work with Ben and David?</h2>
+    <p>You can <a target="_blank" href="https://www.postobject.com/contact">reach us here</a>! ✉️</p>
   </body>
 </html>
